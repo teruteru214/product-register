@@ -14,8 +14,8 @@ script:
 deploy:
   provider: script
   script:
-    docker build -t register.heroku.com/teru-product-register/web -f Dockerfile.prod .;
-    docker push register.heroku.com/teru-product-register/web;
+    docker build -t registry.heroku.com/teru-product-register/web -f Dockerfile.prod .;
+    docker push registry.heroku.com/teru-product-register/web;
     heroku run --app teru-product-register rails db:migrate;
   on:
     branch: master
