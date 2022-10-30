@@ -20,7 +20,7 @@ default: &default
   host: db
   user: postgres
   port: 5432
-  password: <%= ENV.fetch("DATABASE_PASSWORD") %>
+  password: <%= ENV.fetch("postgres") %>
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -80,7 +80,7 @@ test:
 # You can use this database configuration with:
 #
 production:
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['postgres://eyuxzbgjwuwldo:55a50a86a513c3e1ecfee5ae3ea5c03729dfdbe8ae8e84e242815501a48f3ee1@ec2-3-220-207-90.compute-1.amazonaws.com:5432/d5rbj8nvt7andv'] %>
 # production:
 #   <<: *default
 #   database: product-register_production
